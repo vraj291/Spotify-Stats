@@ -1,0 +1,12 @@
+.error{
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.error-msg{
+    color: white;
+    padding: 2rem;
+}

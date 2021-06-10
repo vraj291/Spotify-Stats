@@ -1,0 +1,123 @@
+.artists-others-wrapper{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.artists-wrapper{
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+}
+
+.artists-top-wrapper{
+    margin: 2rem;
+    width: 50%;
+    height: 25rem;
+    color: white;
+    background: rgb(30,215,96);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    overflow: hidden;
+    border-radius: 30px;
+    box-shadow: 4px 4px 10px white;
+    animation: fade-in 1s ease-out;
+    position: relative;
+}
+
+.artists-top-image{
+    display: flex;
+    justify-content: center;
+    border-radius: 50%;
+}
+
+.artists-top-inner-wrapper{
+    display: flex;
+    flex-flow: column;
+    justify-content: space-around;
+    background: rgb(30,215,96);
+}
+
+.artist-album-cover-top{
+    width: 25rem;
+}
+
+.artists-top-inner-inner-wrapper{
+    height: 100%;
+    padding: 1rem;
+    padding-left: 2rem;
+    padding-right: 0;
+    display: flex;
+    flex-flow: column;
+    justify-content: space-around;
+    background: linear-gradient(transparent,black);
+}
+
+.artists-top-title-wrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-right: 2rem;
+}
+
+.artists-top-title{
+    font-size: 2rem;
+    font-weight: bolder;
+}
+
+.artists-top-followers{
+    font-size: 1.13rem;
+    padding: 0.3rem 0;
+}
+
+.artists-top-releases-title{
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin: 1rem 0;
+}
+
+@media (max-width : 1100px) {
+    .artist-album-cover-top{
+        display: none;
+    }
+    .artists-top-wrapper{
+        display: flex;
+        flex-flow: column;
+        justify-content: flex-end;
+        color: white;
+        width: 25rem;
+        height: 25rem;
+        background-size: cover;
+    }
+    .artists-top-inner-inner-wrapper{
+        background: none;
+        padding: 0;
+    }
+    .artists-top-inner-wrapper{
+        background: linear-gradient(transparent,black);
+        padding: 2rem;
+    }
+    .artists-top-title-wrapper{
+        flex-flow: column;
+        align-items: flex-start;
+        margin-bottom: 1.5rem;
+    }
+    .artists-top-title{
+        font-size: 1.7rem;
+    }
+    .artists-top-followers{
+        font-size: 1rem;
+    }
+    .artists-top-releases-title{
+        margin-top: 2rem;
+        font-size: 1.2rem;
+    }
+    .artists-top-releases{
+        font-size: 0.9rem;
+    }
+    .artists-top-genres{
+        font-size: 0.9rem;
+    }
+}

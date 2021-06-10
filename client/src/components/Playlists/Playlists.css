@@ -1,0 +1,90 @@
+.playlist-wrapper{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.playlist-card{
+    margin: 2rem;
+    min-height : 15rem;
+    width : 15rem;
+    background-size: contain;
+    display: flex;
+    align-items: flex-end;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+}
+
+.playlist-desc{
+    position: absolute;
+    text-align: center;
+    align-self: center;
+    display: flex;
+    flex-flow: column;
+    align-content: center;
+    justify-content: space-evenly;
+    pointer-events: none;
+    width: 90%;
+    height: 100%;
+    opacity: 0;
+    margin: 0.7rem;
+    font-size: 1rem;
+    color : rgb(0, 0, 0);
+    transform : rotateY(180deg);
+}
+
+.playlist-card-content{
+    width : 100%;
+    min-height : 8rem;
+    padding : 1rem;
+    color : white;
+    display: flex;
+    flex-flow: column;
+    justify-content: flex-end;
+    background : linear-gradient(transparent 30%,black);
+}
+
+.playlist-card:hover{
+    transform : rotateY(180deg);
+    background-image: none !important;
+    background-color: rgb(30,215,96);
+    transition: all 0.8s ease-out;
+    animation: hover-playlist 0.8s ease-out;
+}
+
+@keyframes hover-playlist {
+    0%{
+        opacity: 1;
+    }
+    50%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+.playlist-card:hover .playlist-card-content{
+    opacity : 0;
+    transition: opacity 0.8s ease-out;
+}
+
+.playlist-card:hover .playlist-desc{
+    opacity : 1;
+    transition: opacity 0.8s ease-out;
+    pointer-events: all;
+}
+
+.playlist-listen{
+    width : max-content;
+    align-self: center;
+    padding: 0.5rem;
+    border-radius: 5px;
+    background-color: black;
+    color: white;
+    font-size: 1rem;
+    border : none;
+}
+

@@ -1,0 +1,28 @@
+.subnav-main{
+    display: grid;
+    place-items: center;
+}
+
+.subnav-wrapper{
+    background-color: rgb(30,215,96);
+    margin-top: 2rem;
+    border-radius: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.subnav-item{
+    color: black;
+    text-transform: uppercase;
+    font-weight: 550;
+    border-radius: 40px;
+    font-size: 1.1rem;
+    padding: 1rem 2rem;
+}
+
+.subnav-active,.subnav-item:hover{
+    background-color: white;
+    color:rgb(30,215,96);
+    font-weight: bold;
+}

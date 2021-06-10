@@ -1,0 +1,15 @@
+.chart-wrapper{
+    width: 45rem;
+}
+
+@media (max-width : 800px) {
+    .chart-wrapper{
+        width: 35rem;
+    }
+}
+
+@media (max-width : 500px) {
+    .chart-wrapper{
+        width: 30rem;
+    }
+}

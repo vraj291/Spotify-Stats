@@ -1,0 +1,203 @@
+.nav-wrapper{
+    color: black;
+    background-color:  rgb(30,215,96);
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav{
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav-header{
+    align-self: center;
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+    font-size: 1.5rem;
+    margin-left: 3rem;
+    font-family: 'Nunito', sans-serif;
+}
+
+li{
+    text-decoration: none;
+    list-style: none;
+}
+
+.nav-link{
+    font-size: 1.2rem;
+    padding: 0.5rem;
+    margin: 0 0.5rem;
+    border-radius: 20px;
+}
+
+.log-out{
+    border: solid white 3px;
+    color: white;
+    font-size: 1.2rem;
+    padding: 0.5rem;
+    font-weight: bold;
+}
+
+.log-out:hover{
+    border: solid rgb(0, 0, 0) 3px;
+    background-color: white;
+    color: rgb(0, 0, 0);
+    transition: all 0.4s ease-out;
+}
+
+.nav-toggle{
+    display: none;
+}
+
+.nav-link:hover{
+    color: rgb(30,215,96);
+    background-color: rgb(20, 20, 20);
+    font-weight: bold;
+    transform: scale(1.1,1.1);
+    transition: all 0.2s ease-in-out;
+}
+
+.nav-link-wrapper{
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.active{
+    color: rgb(240, 241, 241);
+    font-size: 1.1rem;
+    font-weight: bold;
+    position: relative;
+}
+
+.active::before{
+    content: " ";
+    position: absolute;
+    background-color: white;
+    width: 100%;
+    border-radius: 30px;
+    height: 5px;
+    top: 95%;
+    right: 0%;
+    animation: actve 1s ease-out;
+}
+
+@keyframes actve {
+    from{
+        width: 0%;
+    }
+}
+
+@keyframes respnav {
+    from{
+        clip-path: circle(100px at 100% -20%);
+    }
+}
+
+@keyframes reverse-respnav {
+    from{
+        clip-path: circle(1500px at 100% -20%);
+    }
+}
+
+@keyframes usercard-animation {
+    from{
+        opacity: 0;
+    }
+}
+
+.close-mobile-nav{
+    clip-path: circle(100px at 100% -20%);
+    animation: reverse-respnav 1.3s ease-out
+}
+
+.open-mobile-nav{
+    clip-path: circle(1500px at 100% -20%);
+    animation: respnav 1.3s ease-out
+}
+
+@media (max-width: 1100px) {
+    .nav-link-wrapper{
+        display: none;
+        flex-flow: column wrap;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        box-sizing: border-box;
+        margin: 0;
+        left: 0%;
+        background-color:  rgb(30,215,96);
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        z-index: 4;
+    }
+    .log-out{
+        position: absolute;
+        bottom: 5%;
+        transform: translateX(-53%);
+    }
+    .nav-toggle{
+        display: block;
+    }
+    .nav-link{
+        font-size: 1.5rem;
+        opacity: 0;
+        transition: opacity 1s ease-out;
+    }
+    .fade-in{
+        opacity: 1;
+        transition: opacity 1s ease-out;
+    }
+}
+
+.user-card-wrapper{
+    display: none;
+}
+
+.user-image{
+    height: 10rem;
+    border-radius: 50%;
+}
+
+.user-card{
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    background-color:  rgb(30,215,96);
+    top: 50%;
+    left : 50%;
+    transform: translate(-50%,-50%);
+    width : 45%;
+    height: 50%;
+    overflow: hidden;
+    padding: 4rem;
+    border-radius: 40px;
+    z-index: 4;
+    box-shadow: 0 0 0 100rem rgb(0,0,0,0.6);
+    animation: usercard-animation 0.8s ease-out;
+}
+
+.user-name{
+    font-size: 2rem;
+    font-weight: bolder;
+    color: white;
+    margin: 1.3rem;
+}
+
+.user-dets{
+    font-size: 1.1rem;
+    margin: 0.2rem;
+}
+
+.user-profile{
+    background-color: black;
+    margin-top: 1.5rem;
+    padding: 0.5rem;
+    color:rgb(30,215,96);
+    border-radius: 20px;
+}

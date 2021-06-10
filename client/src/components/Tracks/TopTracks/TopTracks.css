@@ -1,0 +1,230 @@
+:root{
+    --card-width : 23rem;
+    --half-card-width : 15rem;
+}
+
+.main-title{
+    color: rgb(30,215,96);
+    font-family: 'Comfortaa', cursive;
+    font-weight: 500;
+    font-size: 2rem;
+    display: grid;
+    place-items: center;
+    text-align: center;
+    margin: 2rem 1rem 1rem;
+    animation: fade-in 1s ease-out;
+}
+
+@keyframes fade-in {
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+.tracks-wrapper{
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+}
+
+.tracks-others-main{
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    width: 25rem;
+    margin-top : 1rem;
+    margin-right: 0.5rem;
+}
+
+a{
+    color: inherit; 
+    text-decoration: inherit;
+}
+
+.tracks-others-wrapper{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+    background-color: rgb(30,215,96);
+    box-shadow: 4px 4px 10px white;
+    border-radius: 10px;
+    width: min-content;
+    overflow: hidden;
+    margin: 1rem 0;
+}
+
+.tracks-others-wrapper:nth-child(odd){
+    flex-flow: row-reverse;
+}
+
+.tracks-others-inner-wrapper{
+    display: flex;
+    color: white;
+    flex-flow: column nowrap;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 1rem 1rem;
+    height: 11rem;
+    background: linear-gradient(transparent,black);
+}
+
+
+.album-cover-top{
+    height: 20rem;
+    width: 25rem;
+}
+
+.tracks-top-wrapper{
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-end;
+    align-items: center;
+    width: 25rem;
+    overflow: hidden;
+    background-color: rgb(30,215,96);
+    box-shadow: 4px 4px 10px white;
+    border-radius: 15px;
+}
+
+.tracks-top-inner{
+    color: white;
+    text-align: right;
+    padding: 2rem;
+    background: linear-gradient(transparent,black);
+}
+
+.tracks-top-title-wrapper{
+    width: var(--card-width);
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.album-cover-others{
+    min-width: 10rem;
+    height: 13rem;
+    background-size: cover;
+}
+
+.tracks-others-title-wrapper{
+    width: var(--half-card-width);
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+}
+
+.tracks-top-title{
+   font-size: 2rem;
+}
+
+.tracks-top-time{
+    font-size: 1.13rem;
+}
+
+.tracks-top-album{
+    width: var(--card-width);
+    margin-top: 1rem;
+}
+
+.tracks-top-artist{
+    width: var(--card-width);
+    font-size: 1.13rem;
+}
+
+.tracks-others-title{
+    font-size: 1.5rem;
+ }
+ 
+ .tracks-others-time{
+     font-size: 1.13rem;
+ }
+ 
+ .tracks-others-album{
+     margin-top: 1.1rem;
+ }
+ 
+ .tracks-others-artist{
+     font-size: 1.1rem;
+ }
+ 
+::-webkit-scrollbar {
+    -webkit-appearance: none;
+    width: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 4px;
+    background-color: rgb(247, 247, 247);
+    -webkit-box-shadow: 0 0 1px rgba(20, 19, 19, 0.5);
+}
+
+.create-playlist-wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 2rem;
+    margin-bottom: -1rem;
+}
+
+.create-playlist-input{
+    display: none;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    background-color:  rgb(30,215,96);
+    top: 50%;
+    left : 50%;
+    transform: translate(-50%,-50%);
+    width : 45%;
+    height: 50%;
+    padding: 3rem;
+    border-radius: 40px;
+    z-index: 4;
+    box-shadow: 0 0 0 100rem rgb(0,0,0,0.6);
+    animation: usercard-animation 0.8s ease-out;
+}
+
+.create-playlist-input-text{
+    width: 90%;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.login-button{
+    font-family: 'Titillium Web', sans-serif;
+}
+
+@media (min-width: 1000px) {
+    .tracks-wrapper{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        place-items: center;
+        margin: 2rem;
+    }
+    .tracks-others-main{
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: flex-start;
+        max-height: 33rem;
+        width: max-content;
+        padding: 0 2rem;
+        overflow-y: scroll;
+    }
+    .tracks-others-wrapper{
+        flex: none;
+    }
+    .album-cover-others{
+        min-width: 13rem;
+    }
+}
+

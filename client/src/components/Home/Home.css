@@ -1,0 +1,26 @@
+.home-wrapper{
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+.home-title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Titillium Web', sans-serif;
+    font-size: 2rem;
+    color: rgb(30,215,96);
+    padding: 2rem 2rem 0rem;
+}
+
+.home-charts{
+    margin-top: 2rem;
+}
+
+.home-user-name{
+    padding: 0 0.5rem;
+    transform: opacity 1s ease-out;
+}

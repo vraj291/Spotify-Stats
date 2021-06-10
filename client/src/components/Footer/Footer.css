@@ -1,0 +1,23 @@
+.footer{
+    align-self: flex-end;
+    display: flex;
+    flex-flow: row nowrap;
+    margin-top: 2rem;
+    padding: 0 1rem 0;
+    justify-content: space-around;
+    align-items: center;
+    background-color: rgb(30,215,96);
+}
+
+.info{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+@media(max-width: 500px){
+    .footer{
+        flex-flow: column nowrap;
+    }
+}
